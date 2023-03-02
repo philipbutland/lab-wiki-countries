@@ -3,10 +3,11 @@ import {useEffect, useState} from 'react'
 
 export default function CountriesList(props) {
 
-  const  [ countries, setCountries]  = useState ([]);
+  const  [ countries, setCountries]  = useState (null);
 
   useEffect(() => {
-    setCountries(props.countries);}, [props.countries]);
+    setCountries(props.countries);}, []);
+    console.log(countries)
 
   return (
     <div className="container">
@@ -14,11 +15,12 @@ export default function CountriesList(props) {
         <div className="col-5">
           <div className="list-group">
           <h2>Countries</h2>
-          {countries.map((country) => {
+
+           {countries && countries.map((country) => {
               return (
                 <div key={country.alpha3Code}>
                 <Link to={`/countries/${country.alpha3Code}`}>
-                  {countries.name.official}
+                  {country.name.official}
                 </Link>
                 </div>
             )

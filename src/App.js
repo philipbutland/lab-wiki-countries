@@ -7,8 +7,7 @@ import CountriesList from './components/CountriesList';
 function App() {
   return (
 
-    <div classNameName="App">
-    <h1>hello</h1>
+    <div className="App">
        <Navbar></Navbar>
 
        <Routes>
