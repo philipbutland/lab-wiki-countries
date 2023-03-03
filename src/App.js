@@ -6,6 +6,7 @@ import CountriesList from './components/CountriesList';
 import CountryDetails from './components/CountryDetails';
 
 function App() {
+  console.log("countries data", CountriesData)
   return (
 
     <div className="App">
