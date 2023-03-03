@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.flag-img{
+  width: 20px;
+  margin-left: 10px;
+}
+
+.big-flag{
+  width: 200px;
+}
+
+.list-group{
+  text-align: left;
+  font-size: 10pt;
+}

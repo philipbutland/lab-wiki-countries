@@ -17,11 +17,15 @@ export default function CountriesList(props) {
           <h2>Countries</h2>
 
            {countries && countries.map((country) => {
+            let flagLink = `https://flagpedia.net/data/flags/icon/72x54/${country.alpha2Code.toLowerCase()}.png`
+
               return (
                 <div key={country.alpha3Code}>
-                <Link to={`/countries/${country.alpha3Code}`}>
-                  {country.name.official}
-                </Link>
+                  <Link to={`/countries/${country.alpha3Code}`}>
+                    {country.name.official}
+                    <img src={flagLink} alt="flag" className="flag-img" />
+                  </Link>
+
                 </div>
             )
           })}
