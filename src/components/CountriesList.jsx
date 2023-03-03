@@ -7,7 +7,7 @@ export default function CountriesList(props) {
 
   useEffect(() => {
     setCountries(props.countries);}, []);
-    console.log(countries)
+    // console.log(countries)
 
   return (
     <div className="container">
